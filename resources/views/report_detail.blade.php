@@ -32,7 +32,7 @@
                         <tr class="text-center">
                             <td>{{$do->nama_pemesan}}</td>
                             <td>{{$do->no_hp_pemesan}}</td>
-                            <td>{{$do->total}}</td>
+                            <td>Rp.{{number_format($do->total)}}</td>
                         </tr>
                         @endforeach
                     </tbody>

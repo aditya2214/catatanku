@@ -35,7 +35,7 @@
             <th class="text-center"> + </th>
             <th>ONGKIR : Rp.{{number_format($detail_orders->ongkir)}}</th>
             <th class="text-center"> = </th>
-            <th>GRAND TOTAL : {{number_format($detail_orders->total_belanja)}}</th>
+            <th>GRAND TOTAL : Rp.{{number_format($detail_orders->total_belanja)}}</th>
             </tr>
         </tfoot>
         @endif
@@ -49,7 +49,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Sisa : {{$sisa}}</th>
+                <th>Sisa : Rp.{{number_format($sisa)}}</th>
             </tr>
         </tfoot>
     </table>

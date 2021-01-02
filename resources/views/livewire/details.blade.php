@@ -1,7 +1,7 @@
 <div>
     @if($detail_orders)
-    <div class="fixed-bottom">
-        <table class="table table-bordered table-dark text-center">
+    <div>
+        <table class="table table-bordered table-dark">
             <thead>
                 <tr>
                     <th> Rp.{{number_format($detail_orders->total_belanja,2)}}</th>
@@ -20,7 +20,7 @@
         </table>
     </div>
     @else
-    <div class="text-light bg-dark fixed-bottom">
+    <div class="text-light bg-dark">
         <h1 class="text-center">?</h1>
     </div>
     @endif

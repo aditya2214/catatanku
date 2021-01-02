@@ -129,10 +129,6 @@
             @endif
         </div>
         @else
-        <div class="-col-4">
-        </div>
-        <div class="-col-4">
-        </div>
         @endif
     </div>
     <hr>

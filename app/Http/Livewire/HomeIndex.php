@@ -49,7 +49,9 @@ class HomeIndex extends Component
 
     public function destroy($id){
         \App\Pemesan::where('id',$id)->delete();
-
+        \App\Order::where('id_pemesan',$id)->delete();
+        \App\DetailOrder::where('id_pemesan',$id)->delete();
+        \App\Pay::where('id_pemesan',$id)->delete();
         session()->flash('message', 'kontak berhasil di hapus');   
 
     }
