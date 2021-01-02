@@ -12,10 +12,7 @@
                 <livewire:store-pesanan></livewire:store-pesanan>
                 @endif
             </div>
-            <div class="col-md-4">
-                
-            </div>
-            <div class="col-md-4" >
+            <div style="position:fixed;left:82%; top:50%;" class="col-md-5">
                 <livewire:details></livewire:details>
             </div>
         </div>

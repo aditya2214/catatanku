@@ -6,7 +6,7 @@
         <div style="margin:10px; position:fixed; left:82%; top:10%;" class="col-xl-2 fixed-top">
             <div class="card">
                 <div class="card-header">
-                    <form action="{{ url ('print') }}" method="POST">
+                    <form target="_blank" action="{{ url ('print') }}" method="POST">
                     @csrf
                         <div class="form-group">
                             <label for="">Initial Parameter </label>

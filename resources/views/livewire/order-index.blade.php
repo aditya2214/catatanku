@@ -49,6 +49,7 @@
                 </form>
                     <button style="position:relative;left:25%;top:-38px;" wire:click="batal" class="btn btn-danger btn-sm">Batal</button>
             @else
+                @if($detail_orders == null)
                 <form style="margin:10px;" wire:submit.prevent="StoreOrder">
                     <input wire:model="id_pemesan" type="hidden">
                     <!-- <div class="form-group">
@@ -92,6 +93,9 @@
                     </div> -->
                     <button class="btn btn-success btn-sm">Simpan</button>
                 </form>
+                @else
+
+                @endif
             @endif
         </div>
         
@@ -144,7 +148,10 @@
                         <th>Jumlah Beli</th>
                         <th>Total Belanja</th>
                         <th>Ukuran</th>
+                        @if($detail_orders == null)
                         <th>Aksi</th>
+                        @else
+                        @endif
                     </tr>
                 </thead>
                 <tbody>
@@ -157,10 +164,13 @@
                         <td>{{$order->harga_produk}}</td>
                         <td>{{$order->jumlah_beli}}</td>
                         <td>{{$order->total_belanja}}</td>
+                        @if($detail_orders == null)
                         <td>
                             <button wire:click="getid({{$order->id}})" class="btn btn-warning btn-sm">Edit</button>
                             <button wire:click="getorder({{$order->id}})" class="btn btn-danger btn-sm">Delete</button> 
                         </td>
+                        @else
+                        @endif
                     </tr>
                     @endforeach
                 </tbody>
